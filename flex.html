@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh_TW">
+<head>
+    <meta charset="UTF-8">
+    <title>FLEX</title>
+    <style>
+        .container{
+            border: 1px red solid;
+            height: 500px;
+            display: flex;
+/*            主軸方向:row(橫向<預設>),column(縱向)*/
+            flex-direction: row;
+/*            主軸對齊方式*/
+            /*flex-start,fles-end,center,space-around,space-between*/
+            justify-content: space-between;
+/*            交錯軸對齊方式*/
+/*            flex-start,flex-end,center,stretch,baseline*/
+            align-items: center;
+/*            設定子元素是否換行,預設為nowrap*/
+            flex-wrap: wrap;
+/*            針對多行去做對齊方式*/
+            align-content: flex-end;
+        }
+        .container div{
+            background-color: darkcyan;
+            color: white;
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+        #item1{
+/*           align-self :flex-end;*/
+            order: -2;
+        }
+        #item2{
+            order: -1;
+        }       
+        #item3{
+            order: -3;
+        }
+        
+    
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>      <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div>        <div id="item1">1</div>
+        <div id="item2">2</div>
+        <div id="item3">3</div><div id="item2">2</div>
+        <div id="item3">3</div>
+    </div>
+</body>
+</html>
